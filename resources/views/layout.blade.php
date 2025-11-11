@@ -19,7 +19,7 @@
                     <a class="nav-link" href="{{ url('/') }}">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Siswa</a>
+                    <a class="nav-link" href="{{ url('kelas') }}">Kelas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ url('/') }}">Kelas</a>
