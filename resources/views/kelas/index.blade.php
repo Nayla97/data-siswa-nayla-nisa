@@ -24,10 +24,10 @@ Data kelas
             <td>{{ $i++ }}</td>
             <td>{{ $Kelas->name }}</td>
             <td class="text-center">
-                <a href="{{ url('kelas/'.$kelas->$id.'/edit') }}" class="btn btn-primary">
+                <a href="{{ url('kelas/'.$Kelas->$id.'/edit') }}" class="btn btn-primary">
                     Edit
                 </a>
-                <a href="{{ url('kelas/'.$kelas->$id.'/delete') }}" class="btn btn-danger">
+                <a href="{{ url('kelas/'.$Kelas->$id.'/delete') }}" class="btn btn-danger">
                     Hapus
                 </a>
             </td>

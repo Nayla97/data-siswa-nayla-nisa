@@ -10,7 +10,7 @@ Tambah Kelas
     <div class="mb-3">
         <div class="row">
             <div class="col-md-7">
-                <input type="text" name="name" class="form-control" required>
+                <input type="text" name="nama" class="form-control" required>
             </div>
         </div>
     </div>

@@ -33,9 +33,9 @@ class KelasController extends Controller
      */
     public function store(Request $request)
     {
-        $name = $request->name;
+        $nama = $request->nama;
         KelasModel::create([
-            'name' => $name
+            'nama' => $nama
         ]);
         return redirect('kelas')->with('success','Kelas berhasil ditambahkan');
     }
@@ -62,8 +62,8 @@ class KelasController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $kelas = KelasModel::find($id);
-        $kelas->name = $request->name;
+        $kelas = KelasModel::find( $id);
+        $kelas->nama = $request->nama;
         $kelas->save();
         return redirect('kelas/'.$id.'/edit')->with('success','Kelas berhasil disimpan');
     }
