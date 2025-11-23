@@ -13,6 +13,15 @@ return new class extends Migration
     {
         Schema::create('siswa', function (Blueprint $table) {
             $table->id();
+            $table->bigInteger('kelas_id');
+            $table->integer('nis');
+            $table->string('nama');
+            $table->tinyInteger('jk');
+            $table->string('tempat_lahir');
+            $table->date('tanggal_lahir');
+            $table->string('sosial_media');
+            $table->string('alamat');
+            $table->string('foto');
             $table->timestamps();
         });
     }

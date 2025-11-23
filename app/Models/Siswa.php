@@ -19,6 +19,12 @@ class Siswa extends Model
         'foto'    
     ];
 
+    protected $table = 'siswa';
+
+    protected $casts = [
+        'tanggal_lahir' => 'date',
+    ];
+
     public function Kelas(): BelongsTo
     {
         return $this->belongsTo(Kelas::class);

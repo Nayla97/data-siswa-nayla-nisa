@@ -6,6 +6,7 @@ Data Siswa
 <a href="{{ url('siswa/create') }}" class="btn btn-primary">
     Tambah Siswa
 </a>
+
 <table class="table table-striped table-bordered">
     <thead>
         <tr>
@@ -23,14 +24,14 @@ Data Siswa
     <tbody>
         @foreach($siswaa as $siswa)
         <tr>
-            <td class="text-center">{{ $siswa->number }}</td>
-            <td class="text-center"><img src="{{ asset('uploads/'.$siswa->picture) }}" width+75px></td>
-            <td>{{ $siswa->name }}</td>
+            <td class="text-center">{{ $loop->iteration }}</td>
+            <td class="text-center"><img src="{{ asset('uploads/'.$siswa->foto) }}" width="75px"></td>
+            <td>{{ $siswa->nama }}</td>
             <td>{{ $siswa->kelas->name }}</td>
-            <td>{{ ($siswa->gender == 1)? 'L' : 'P}' }}</td>
-            <td>{{ $siswa->birth_place }},{{ date("d-m-y",strtotime($siswa->birth_date)) }}</td>
-            <td>{{ $siswa->socialmedia }}</td>
-            <td>{{ $siswa->address }}</td>
+            <td>{{ ($siswa->jk == 1)? 'L' : 'P' }}</td>
+            <td>{{ $siswa->tempat_lahir }},{{ date("d-m-y",strtotime($siswa->tanggal_lahir)) }}</td>
+            <td>{{ $siswa->sosial_media }}</td>
+            <td>{{ $siswa->alamat }}</td>
             <td class="text-center">
                 <a href="{{ url('siswa/'.$siswa->id.'/edit') }}" class="btn btn-success">Edit</a>
                 <a href="{{ url('siswa/'.$siswa->id.'/delete') }}" class="btn btn-danger">Hapus</a>

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('title','Beranda')</title>
     <link rel="stylesheet" href="{{ asset('css/style.css') }}" type="text/css">
     <link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}" type="text/css">
@@ -22,7 +23,7 @@
                     <a class="nav-link" href="{{ url('kelas') }}">Kelas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ url('/') }}">Siswa</a>
+                    <a class="nav-link" href="{{ url('siswa') }}">Siswa</a>
                 </li>
             </ul>
         </div>
@@ -42,7 +43,7 @@
         </div>
     </main>
 
-    <footer class="bg-dark text-white py-3">
+    <footer class="bg-dark text-white text-center py-3">
         <div class="container">
             &copy; Manajemen Data Nayla-Nisa {{ date('Y') }}
         </div>

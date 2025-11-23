@@ -18,6 +18,8 @@ Route::post('kelas/update/{id}',[KelasController::class,'update']);
 Route::get('siswa',[SiswaController::class,'index']);
 Route::get('siswa/create',[SiswaController::class,'create']);
 Route::post('siswa/store',[SiswaController::class,'store']);
+
 Route::get('siswa/{id}/delete',[SiswaController::class,'delete']);
 Route::get('siswa/{id}/edit',[SiswaController::class,'edit']);
 Route::post('siswa/update/{id}',[SiswaController::class,'update']);
+
